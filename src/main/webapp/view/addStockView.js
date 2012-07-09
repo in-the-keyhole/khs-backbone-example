@@ -48,7 +48,7 @@ define([
 				
 			ok : function(e){			  				
 				var ticker = $("#ticker").val();
-				var url = 'http://localhost:8080/khs-sherpa-jquery/sherpa?endpoint=StockService&action=quote&ticker='+ticker+'&callback=?';
+				var url = 'sherpa?endpoint=StockService&action=quote&ticker='+ticker+'&callback=?';
 				$.getJSON(url,
 				        function(data) {
 						   var list = new stockListCollection();
