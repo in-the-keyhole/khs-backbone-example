@@ -4,4 +4,18 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
+   <servlet>	
+  		<servlet-name>sherpa</servlet-name>
+		<display-name>sherpa</display-name>
+		<servlet-class>com.khs.sherpa.servlet.SherpaServlet</servlet-class>	
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>sherpa</servlet-name>
+		<url-pattern>/sherpa</url-pattern>
+	</servlet-mapping>
+  
+  
+  
 </web-app>

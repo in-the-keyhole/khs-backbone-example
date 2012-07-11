@@ -8,13 +8,13 @@ function($, Backbone, _, StockListItem) {
 			console.log('findScripts url:' + this.url);
 			var data = this.localGet();
 			if (data == null) {
-				this.loadScripts();
+				this.loadStocks();
 			} else {
 				console.log('local data present..');
 				this.reset(data);
 			}
 		},
-		loadScripts : function() {
+		loadStocks : function() {
 			var self = this;
 			$.getJSON(this.url, {
 				}).success(function(data, textStatus, xhr) {

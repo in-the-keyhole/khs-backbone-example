@@ -31,8 +31,8 @@ define([
 		    },
 
 		    navigate : function(e){
-		        window.tc.routers.workspaceRouter.ticker = this.model;
-		    	window.tc.routers.workspaceRouter.navigate("#stockDetail",true);
+		        window.stock.routers.workspaceRouter.ticker = this.model;
+		    	window.stock.routers.workspaceRouter.navigate("#stockDetail",true);
 		    	return false;
 		    }
 		});

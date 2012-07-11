@@ -13,7 +13,7 @@ define([
 			initialize : function() {
 				
 				this.list = new stockListCollection();
-				this.model = window.tc.routers.workspaceRouter.ticker;
+				this.model = window.stock.routers.workspaceRouter.ticker;
 				
 				$("cancel").on("click", function(e){				
 					navigate(e);					
@@ -54,7 +54,7 @@ define([
 						   var list = new stockListCollection();
 					       list.add(data);
 					       list.localSave(list.models);
-							window.tc.routers.workspaceRouter.navigate("#index",true);
+							window.stock.routers.workspaceRouter.navigate("#index",true);
 				          });		
 				
 			    return false;
@@ -62,7 +62,7 @@ define([
 			    
 			 cancel : function(e){			  
 			        
-				    window.tc.routers.workspaceRouter.navigate("#index",true);
+				    window.stock.routers.workspaceRouter.navigate("#index",true);
 			    	return false;
 			}
 			

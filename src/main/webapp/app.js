@@ -3,7 +3,7 @@ define(['backbone', 'router/workspaceRouter'], function(Backbone, WorkspaceRoute
 	"use strict";
 
 	 $(function(){
-		window.tc = {
+		window.stock = {
 			routers : {
 				workspaceRouter : WorkspaceRouter
 			},
@@ -13,6 +13,6 @@ define(['backbone', 'router/workspaceRouter'], function(Backbone, WorkspaceRoute
 		};
 		
 		var started = Backbone.history.start({pushState:false, root:'/HTML5BackboneJQMRequireJS/'});
-		window.tc.routers.workspaceRouter.navigate("#index", {trigger:true});
+		window.stock.routers.workspaceRouter.navigate("#index", {trigger:true});
 	});
 });

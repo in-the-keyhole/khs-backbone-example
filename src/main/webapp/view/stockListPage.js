@@ -38,12 +38,12 @@ define([
 			      "click #add"  : "add",
 			    },
 			 about : function(e) {	  
-				    window.tc.routers.workspaceRouter.navigate("#about",true);
+				    window.stock.routers.workspaceRouter.navigate("#about",true);
 				    return false;
 			  },
 			
 			  add : function(e) {	  
-				    window.tc.routers.workspaceRouter.navigate("#add",true);
+				    window.stock.routers.workspaceRouter.navigate("#add",true);
 				    return false;
 			    },    
 			    			    

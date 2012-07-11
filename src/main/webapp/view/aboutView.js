@@ -32,7 +32,7 @@ define([
 			
 				
 			navigate : function(e){			  
-			    	window.tc.routers.workspaceRouter.navigate("#index",true);
+			    	window.stock.routers.workspaceRouter.navigate("#index",true);
 			    	return false;
 			}
 			

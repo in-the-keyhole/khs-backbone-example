@@ -10,7 +10,7 @@ define([
 		return Backbone.View.extend({
 			id : 'stock-detail-page',
 			initialize : function() {
-				this.model = window.tc.routers.workspaceRouter.ticker;
+				this.model = window.stock.routers.workspaceRouter.ticker;
 				
 				$("back").on("click", function(e){				
 					back(e);					
@@ -42,7 +42,7 @@ define([
 			
 				
 			back : function(e){			  
-			    	window.tc.routers.workspaceRouter.navigate("#index",true);
+			    	window.stock.routers.workspaceRouter.navigate("#index",true);
 			    	return false;
 			},
 			    
@@ -50,7 +50,7 @@ define([
 				
 				  var list = new stockListCollection();
 			      list.localRemove(this.model);
-			      window.tc.routers.workspaceRouter.navigate("#index",true);
+			      window.stock.routers.workspaceRouter.navigate("#index",true);
 			    	return false;
 			}    
 			    
