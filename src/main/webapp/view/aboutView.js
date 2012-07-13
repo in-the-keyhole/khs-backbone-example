@@ -9,7 +9,7 @@ define([
 		return Backbone.View.extend({
 			id : 'about-page',
 			initialize : function() {
-				this.model = window.tc.routers.workspaceRouter.ticker;
+				this.model = window.stock.routers.workspaceRouter.ticker;
 				
 				$("a[href]").on("click", function(e){				
 					navigate(e);					

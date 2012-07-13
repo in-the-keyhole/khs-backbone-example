@@ -2,7 +2,7 @@ define(['jquery', 'backbone', 'underscore', 'model/stockItemModel'],
 function($, Backbone, _, StockListItem) {
 	return Backbone.Collection.extend({
 		model : StockListItem,
-		url : 'sherpa?endpoint=Stock?ervice&action=quotes&callback=?',
+		url : 'sherpa?endpoint=StockService&action=quotes&callback=?',
 		initialize : function() {
 			$.mobile.showPageLoadingMsg();
 			console.log('findScripts url:' + this.url);
