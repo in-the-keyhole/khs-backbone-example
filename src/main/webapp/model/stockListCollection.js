@@ -41,9 +41,12 @@ function($, Backbone, _, StockListItem) {
 		    data = JSON.parse(d);
 		    return data;
 	   },
-	   localRemove : function(model){
-		   this.remove(model);
-		   this.localSave(this.models);
+	   localRemove : function(model){  
+		   var target = this.models;
+		   var f = function(m) { 	  
+		   return m.toJSON().ticker == model.toJSON().ticker};
+		   var result = _.reject(target,f);
+		   this.localSave(result);
 	   }
 	   
 				
