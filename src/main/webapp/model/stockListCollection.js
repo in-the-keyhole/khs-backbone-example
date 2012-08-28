@@ -18,7 +18,7 @@ function($, Backbone, _, StockListItem) {
 			var self = this;
 			$.getJSON(this.url, {
 				}).success(function(data, textStatus, xhr) {
-					console.log('script list get json success');
+					console.log('stock list get json success');
 					console.log(JSON.stringify(data.scripts));
 					self.reset(data);
 					self.localSave(data);
@@ -27,6 +27,12 @@ function($, Backbone, _, StockListItem) {
 					console.log("data - " + JSON.stringify(data));
 					console.log("textStatus - " + textStatus);
 					console.log("xhr - " + JSON.stringify(xhr));
+					var data = self.localGet();
+					self.reset(data);
+					self.localSave(data);
+					console.log('Getting data from local storage'+data);
+					$.mobile.hidePageLoadingMsg();
+					
 				}).complete(function() {
 					console.log('json request complete');
 					$.mobile.hidePageLoadingMsg();
