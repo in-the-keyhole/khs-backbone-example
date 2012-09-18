@@ -1,5 +1,4 @@
-define(['backbone', 'router/workspaceRouter'], function(Backbone, WorkspaceRouter) {
-	// Using ECMAScript 5 strict mode during development. By default r.js will ignore that.
+define(['backbone', 'router/workspaceRouter'], function(Backbone, WorkspaceRouter) {	
 	"use strict";
 
 	 $(function(){
