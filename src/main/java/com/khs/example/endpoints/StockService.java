@@ -32,12 +32,12 @@ public class StockService {
 		return findQuotes(TICKERS);
 	}
 	
-	public List<Stock> refresh(@Param(name="tickers") String tickers){
+	public List<Stock> refresh(@Param("tickers") String tickers){
 		return findQuotes(tickers);
 	}
 
 	
-	public Stock quote(@Param(name="ticker") String ticker) {
+	public Stock quote(@Param("ticker") String ticker) {
 		
 		List<Stock> stocks = findQuotes(ticker);
 		Stock result = null;
