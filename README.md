@@ -24,7 +24,7 @@ To build it clone then use Maven:
 	$ cd khs-backbone-example
 	$ mvn install
 	
-To open application from standard web server without MOCK JSON/Endpoints enter the following URL.
+To open application from standard web server without JSON/Endpoints enter the following URL.
 
 	http://<server>/khs-example/index.noserver.hmtl
 
