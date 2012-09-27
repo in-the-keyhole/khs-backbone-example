@@ -8,15 +8,27 @@
 			'text' : 'libs/require/text',
 			'jquery' : 'libs/jquery-1.7.2',
 			'jquerymobile' : 'libs/jquery.mobile-1.1.0-rc.2',
-			'sherpa' : 'libs/sherpa'
+			'sherpa' : 'libs/sherpa',
+			'mockjax' : 'libs/mockjax/mockjax'
 		},
-		baseUrl : ''
+		baseUrl : '',
+		shim: {
+			'mockjax' : {
+				deps: ['jquery']
+			}
+		}
 		
 	});
 
 	require(['require', 'backbone', 'jquery', 'underscore'], function(require, Backbone, $, _) {
 		// framework loaded
-		require(['require', 'jquerymobile', 'app'], function(require) {
+		var appDependencies = ['jquerymobile', 'app'];
+		
+		if ( typeof DEV_MODE != 'undefined' && DEV_MODE == true ) {
+			appDependencies.push('fixtures/stockList.fixture.js' );
+		}
+		
+		require(appDependencies, function(require) {
 
 			// Global overrides to disable hashchange listening
 			// (as opposed to using urlHistory.listeningEnabled)

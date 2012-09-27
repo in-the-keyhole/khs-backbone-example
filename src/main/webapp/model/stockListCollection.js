@@ -16,27 +16,24 @@ function($, Backbone, _, StockListItem) {
 		},
 		loadStocks : function() {
 			var self = this;
-			$.getJSON(this.url, {
-				}).success(function(data, textStatus, xhr) {
+			$.ajax( {
+				url: this.url,
+				success: function(data, textStatus, xhr)
+				{
 					console.log('stock list get json success');
-					console.log(JSON.stringify(data.scripts));
 					self.reset(data);
 					self.localSave(data);
-				}).error(function(data, textStatus, xhr) {
-					console.log('error');
-					console.log("data - " + JSON.stringify(data));
-					console.log("textStatus - " + textStatus);
-					console.log("xhr - " + JSON.stringify(xhr));
-					var data = self.localGet();
+				},
+				error: function(data, textStatus, xhr) {
+					console.log('stock list get json success');
 					self.reset(data);
 					self.localSave(data);
-					console.log('Getting data from local storage'+data);
-					$.mobile.hidePageLoadingMsg();
-					
-				}).complete(function() {
+				},
+				complete: function() {
 					console.log('json request complete');
 					$.mobile.hidePageLoadingMsg();
-				});
+				}
+			});
 		},
 		localSave : function(data) {
 			var d = JSON.stringify(data);
