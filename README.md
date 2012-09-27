@@ -23,7 +23,12 @@ To build it clone then use Maven:
     $ git clone ...
 	$ cd khs-backbone-example
 	$ mvn install
+	
+To open application from standard web server without MOCK JSON/Endpoints enter the following URL.
 
-Add WAR to application server an enter the following URL. 
+	http://<server>/khs-example/index.noserver.hmtl
+
+
+If you deployed as a WAR and want to engage JSON/Endpoints enter the following URL. 
 
 	http://<server>/khs-backone-example/index.html
